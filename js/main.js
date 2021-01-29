@@ -1,8 +1,7 @@
-//Final Function
+//Ticket Increase and Decrease Count with Validation
 function handleTicketChange(ticket, isIncrease){
-    const ticketQuantity = document.getElementById(ticket + '-quantity');
-    const ticketQuantityNumber = parseInt(ticketQuantity.value);
-    // const totalQuantity = ticketQuantityNumber - 1;
+    const ticketQuantityNumber = getQuantityValue(ticket);
+    
     let totalQuantity = ticketQuantityNumber;
     if(isIncrease == true){
         totalQuantity = ticketQuantityNumber + 1;
@@ -10,20 +9,15 @@ function handleTicketChange(ticket, isIncrease){
     if(isIncrease ==  false && totalQuantity > 0){
         totalQuantity = ticketQuantityNumber - 1;
     }
-    ticketQuantity.value = totalQuantity;
-    // //For ticket price
-    // const totalTicketPrice = totalQuantity * 150;
-    // document.getElementById('sub-total').innerText = totalTicketPrice;
+    document.getElementById(ticket + '-quantity').value = totalQuantity;
     totalCalculate();
 }
 
 function totalCalculate(){
-    const firstClassInput = document.getElementById('firstClass-quantity');
-    const firstClassInputNumber = parseInt(firstClassInput.value);
+    const firstClassQuantityNumber = getQuantityValue('firstClass');
+    const economyQuantityNumber = getQuantityValue('economy');
 
-    const economyInputNumber = getInputValue('economy');
-
-    const subTotalPrice = firstClassInputNumber * 150 + economyInputNumber * 100;
+    const subTotalPrice = firstClassQuantityNumber * 150 + economyQuantityNumber * 100;
     document.getElementById('sub-total').innerText = subTotalPrice;
 
     const tax = Math.round(subTotalPrice * 0.1);
@@ -33,66 +27,8 @@ function totalCalculate(){
     document.getElementById('total-amount').innerText = total;
 }
 
-function getInputValue(ticket){
-    const ticketInput  = document.getElementById(ticket + '-quantity');
-    const ticketInputNumber = parseInt(ticketInput.value);
-    return ticketInputNumber;
+function getQuantityValue(ticket){
+    const ticketQuantity  = document.getElementById(ticket + '-quantity');
+    const ticketQuantityNumber = parseInt(ticketQuantity.value);
+    return ticketQuantityNumber;
 }
-
-
-
-// //Use function
-// document.getElementById('firstClass-increase').addEventListener('click', function(){
-//   ticketChange(true);
-// });
-
-// document.getElementById('firstClass-decrease').addEventListener('click', function(){
-//     ticketChange(false);
-// });
-
-
-// function ticketChange(isIncrease){
-//     const ticketQuantity = document.getElementById('firstClass-quantity');
-//     const ticketQuantityNumber = parseInt(ticketQuantity.value);
-//     // const totalQuantity = ticketQuantityNumber - 1;
-//     let totalQuantity = ticketQuantityNumber;
-//     if(isIncrease == true){
-//         totalQuantity = ticketQuantityNumber + 1;
-//     }
-//     if(isIncrease ==  false && totalQuantity > 0){
-//         totalQuantity = ticketQuantityNumber - 1;
-//     }
-//     ticketQuantity.value = totalQuantity;
-//     //For ticket price
-//     const totalTicketPrice = totalQuantity * 150;
-//     document.getElementById('sub-total').innerText = totalTicketPrice;
-// }
-
-
-
-
-
-
-// //For Increase
-// document.getElementById('firstClass-increase').addEventListener('click', function(){
-//     const ticketQuantity = document.getElementById('firstClass-quantity');
-//     const ticketQuantityNumber = parseInt(ticketQuantity.value);
-//     const totalQuantity = ticketQuantityNumber + 1;
-//     ticketQuantity.value = totalQuantity;
-//     //For ticket price
-//     const totalTicketPrice = totalQuantity * 150;
-//     document.getElementById('sub-total').innerText = totalTicketPrice;
-// });
-
-
-// //For Decrease
-// document.getElementById('firstClass-decrease').addEventListener('click', function(){
-//     const ticketQuantity = document.getElementById('firstClass-quantity');
-//     const ticketQuantityNumber = parseInt(ticketQuantity.value);
-//     const totalQuantity = ticketQuantityNumber - 1;
-//     ticketQuantity.value = totalQuantity;
-//     //For ticket price
-//     const totalTicketPrice = totalQuantity * 150;
-//     document.getElementById('sub-total').innerText = totalTicketPrice;
-// });
-
