@@ -29,10 +29,26 @@ function totalCalculate(){
 
     const total = subTotalPrice + tax;
     document.getElementById('total-amount').innerText = total;
+    
+    //total Fare
+    const ticketFare = total;
+    document.getElementById('total-fare').innerText = ticketFare;
+     
+    // total Quantity
+    const totalQuantity = firstClassQuantityNumber + economyQuantityNumber;
+    document.getElementById('total-quantity').innerText = totalQuantity;
+
 }
 
 function getQuantityValue(ticket){
     const ticketQuantity  = document.getElementById(ticket + '-quantity');
     const ticketQuantityNumber = parseInt(ticketQuantity.value);
     return ticketQuantityNumber;
+}
+
+
+// Connect another page
+function submitInfo(){
+    document.getElementById('booking-info').style.display = 'none';
+    document.getElementById('ticket-info').style.display = 'block';
 }

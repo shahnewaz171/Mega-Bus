@@ -7,7 +7,7 @@
 }
 body{
     font-family: 'Roboto', sans-serif;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('/images/bus.png');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('/images/bus.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
@@ -64,7 +64,6 @@ nav ul li a:hover, a.active{
     float: right;
     width: 80%;
     margin: 50px 0px 0px 80px;
-    display: none;
 }
 .booking-form h3{
     margin: 10px 0px;
@@ -128,6 +127,9 @@ nav ul li a:hover, a.active{
 .ticket-information table{
     width: 100%;
 }
+#ticket-info{
+    display: none;
+}
 table{
     max-width: 100%;
     background-color: transparent;
@@ -175,7 +177,14 @@ table{
     background-color:  #52AF3A;
     cursor: pointer;
 }
+
 .amount{
     display: flex;
     justify-content: space-between;
+}
+footer{
+    margin-top: 3rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
 }

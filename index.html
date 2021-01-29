@@ -37,7 +37,7 @@
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
 
-        <div class="booking-form">
+        <div id="booking-info" class="booking-form">
             <h3>Explore By Bus</h3>
             <div class="inputs">
                 <div class="input-group">
@@ -63,7 +63,7 @@
             <div class="inputs">
                 <div class="input-group f-class">
                 <div>
-                    <label for="">First Class ($150)</label>
+                    <label for="economy-quantity">First Class ($150)</label>
                     <input id="firstClass-quantity" class="inp-style inp-width" type="number" name="first_class" value="0">
                 </div>
                 <div class="plus-minus-btn">
@@ -73,7 +73,7 @@
             </div>
                 <div class="input-group f-class">
                     <div>
-                        <label for="">Economy ($100)</label>
+                        <label for="economy-quantity">Economy ($100)</label>
                         <input id="economy-quantity" class="inp-style inp-width" type="number" name="economy" value="0">
                     </div>
                     <div class="plus-minus-btn">
@@ -97,32 +97,39 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button  onclick="submitInfo()" id="book-btn" class="btn-style">Book Now</button>
+            <p id="demo"></p>
         </div>
-
-        <div class="information">
+        <!--/. Booking Section-->
+        
+        <!-- Ticket Information -->
+        <div id="ticket-info" class="information">
             <div class="ticket-information">
                 <h3>Ticket Information</h1>
                 <table>
                     <thead>
                         <tr>
-                            <th>Quantity</th>
-                            <th>Fare(Dollar)</th>
+                            <th>Total Ticket</th>
+                            <th>Total Fare(Dollar)</th>
                             <th>Class</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>05</td>
-                            <td>500</td>
-                            <td>Economy</td>
+                            <td id="total-quantity"></td>
+                            <td id="total-fare"></td>
+                            <td id="ticket-type">Economy</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+        <!--/. Ticket Information -->
     </main>
-    <!--/. Booking Section-->
+
+    <footer class="mt-5">
+        <p><small>This website made by &copy Muhammad Shahnewaz, all right reserved.</small></p>
+    </footer>
 
     <!-- JS -->
     <script src="js/main.js"></script>
