@@ -3,6 +3,7 @@ function handleTicketChange(ticket, isIncrease){
     const ticketQuantityNumber = getQuantityValue(ticket);
 
     let totalQuantity = ticketQuantityNumber;
+    
     if(isIncrease == true){
         totalQuantity = ticketQuantityNumber + 1;
     }
@@ -10,6 +11,7 @@ function handleTicketChange(ticket, isIncrease){
         totalQuantity = ticketQuantityNumber - 1;
     }
     document.getElementById(ticket + '-quantity').value = totalQuantity;
+
     totalCalculate();
 }
 
