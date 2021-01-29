@@ -65,11 +65,11 @@
                 <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="first_class" value="0">
+                    <input id="firstClass-quantity" class="inp-style inp-width" type="number" name="first_class" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <button><i class="fas fa-plus"></i></button>
-                    <button><i class="fas fa-minus"></i></button>
+                    <button id="firstClass-increase"><i class="fas fa-plus"></i></button>
+                    <button id="firstClass-decrease"><i class="fas fa-minus"></i></button>
                 </div>
             </div>
                 <div class="input-group f-class">
@@ -92,9 +92,9 @@
                         <h4>Total:</h4>
                     </div>
                     <div class="right">
-                        <p>$500</p>
-                        <p>$50</p>
-                        <p>$550</p>
+                        <p>$<span id="sub-total">0</span></p>
+                        <p>$<span id="tax-amount">0</span></p>
+                        <p>$<span id="total-amount">0</span></p>
                     </div>
                 </div>
             </div>
@@ -105,6 +105,7 @@
     <!--/. Booking Section-->
 
     <!-- JS -->
+    <script src="js/main.js"></script>
     <script src="js/all.min.js"></script>
 </body>
 
