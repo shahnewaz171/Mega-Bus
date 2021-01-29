@@ -1,7 +1,7 @@
 //Ticket Increase and Decrease Count with Validation
 function handleTicketChange(ticket, isIncrease){
     const ticketQuantityNumber = getQuantityValue(ticket);
-    
+
     let totalQuantity = ticketQuantityNumber;
     if(isIncrease == true){
         totalQuantity = ticketQuantityNumber + 1;
@@ -13,6 +13,8 @@ function handleTicketChange(ticket, isIncrease){
     totalCalculate();
 }
 
+
+//The total amount has been calculated
 function totalCalculate(){
     const firstClassQuantityNumber = getQuantityValue('firstClass');
     const economyQuantityNumber = getQuantityValue('economy');
