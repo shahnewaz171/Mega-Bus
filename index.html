@@ -37,7 +37,7 @@
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
 
-        <div id="booking-info" class="booking-form">
+        <div id="booking-information" class="booking-form">
             <h3>Explore By Bus</h3>
             <div class="inputs">
                 <div class="input-group">
@@ -63,7 +63,7 @@
             <div class="inputs">
                 <div class="input-group f-class">
                 <div>
-                    <label id="firstClass-title" for="firstClass-quantity">First Class ($150)</label>
+                    <label for="">First Class ($150)</label>
                     <input id="firstClass-quantity" class="inp-style inp-width" type="number" name="first_class" value="0">
                 </div>
                 <div class="plus-minus-btn">
@@ -73,7 +73,7 @@
             </div>
                 <div class="input-group f-class">
                     <div>
-                        <label for="economy-quantity" id="economy-title">Economy ($100)</label>
+                        <label for="">Economy ($100)</label>
                         <input id="economy-quantity" class="inp-style inp-width" type="number" name="economy" value="0">
                     </div>
                     <div class="plus-minus-btn">
@@ -97,13 +97,12 @@
                     </div>
                 </div>
             </div>
-            <button  onclick="submitInfo()" id="book-btn" class="btn-style">Book Now</button>
-            <p id="demo"></p>
+            <button  onclick="submitInformation()" id="book-btn" class="btn-style">Book Now</button>
         </div>
         <!--/. Booking Section-->
         
         <!-- Ticket Information -->
-        <div id="ticket-info" class="information">
+        <div id="ticket-information" class="information">
             <div class="ticket-information">
                 <h3>Ticket Information</h1>
                 <table>
@@ -115,7 +114,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="total-quantity"></td>
+                            <td id="total-ticket"></td>
                             <td id="total-fare"></td>
                         </tr>
                     </tbody>

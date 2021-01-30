@@ -26,20 +26,20 @@ function totalCalculate(){
     document.getElementById('sub-total').innerText = subTotalPrice;
 
     //Total Tax
-    const tax = Math.round(subTotalPrice * 0.1);
-    document.getElementById('tax-amount').innerText = tax;
+    const totalTax = Math.round(subTotalPrice * 0.1);
+    document.getElementById('tax-amount').innerText = totalTax;
     
     //Total Amount
-    const total = subTotalPrice + tax;
-    document.getElementById('total-amount').innerText = total;
+    const totalAmount = subTotalPrice + totalTax;
+    document.getElementById('total-amount').innerText = totalAmount;
     
     //Total Fare
-    const ticketFare = total;
+    const ticketFare = totalAmount;
     document.getElementById('total-fare').innerText = ticketFare;
      
     //Total Ticket
-    const totalQuantity = firstClassQuantityNumber + economyQuantityNumber;
-    document.getElementById('total-quantity').innerText = totalQuantity;
+    const totalTicket = firstClassQuantityNumber + economyQuantityNumber;
+    document.getElementById('total-ticket').innerText = totalTicket;
 }
 
 function getQuantityValue(ticket){
@@ -50,7 +50,7 @@ function getQuantityValue(ticket){
 
 
 // Connected Another Page
-function submitInfo(){
-    document.getElementById('booking-info').style.display = 'none';
-    document.getElementById('ticket-info').style.display = 'block';
+function submitInformation(){
+    document.getElementById('booking-information').style.display = 'none';
+    document.getElementById('ticket-information').style.display = 'block';
 }

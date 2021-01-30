@@ -124,7 +124,7 @@ nav ul li a:hover, a.active{
 .ticket-information table{
     width: 100%;
 }
-#ticket-info{
+#ticket-information{
     display: none;
 }
 table{
