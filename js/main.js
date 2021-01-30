@@ -40,6 +40,17 @@ function totalCalculate(){
     //Total Ticket
     const totalTicket = firstClassQuantityNumber + economyQuantityNumber;
     document.getElementById('total-ticket').innerText = totalTicket;
+    
+    //Total Class [First + Economy]
+    let firstClass = firstClassQuantityNumber;
+    if(firstClassQuantityNumber > 0){
+        document.getElementById('first-class').innerText = "First " + firstClass; 
+    }
+
+    let economyClass = economyQuantityNumber;
+    if(economyQuantityNumber > 0){
+        document.getElementById('economy-class').innerText = "Economy " + economyClass; 
+    }
 }
 
 function getQuantityValue(ticket){
