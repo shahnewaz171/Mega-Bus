@@ -21,23 +21,25 @@ function totalCalculate(){
     const firstClassQuantityNumber = getQuantityValue('firstClass');
     const economyQuantityNumber = getQuantityValue('economy');
 
+    //Sub-total Price
     const subTotalPrice = firstClassQuantityNumber * 150 + economyQuantityNumber * 100;
     document.getElementById('sub-total').innerText = subTotalPrice;
 
+    //Total Tax
     const tax = Math.round(subTotalPrice * 0.1);
     document.getElementById('tax-amount').innerText = tax;
-
+    
+    //Total Amount
     const total = subTotalPrice + tax;
     document.getElementById('total-amount').innerText = total;
     
-    //total Fare
+    //Total Fare
     const ticketFare = total;
     document.getElementById('total-fare').innerText = ticketFare;
      
-    // total Quantity
+    //Total Ticket
     const totalQuantity = firstClassQuantityNumber + economyQuantityNumber;
     document.getElementById('total-quantity').innerText = totalQuantity;
-
 }
 
 function getQuantityValue(ticket){
@@ -47,7 +49,7 @@ function getQuantityValue(ticket){
 }
 
 
-// Connect another page
+// Connected Another Page
 function submitInfo(){
     document.getElementById('booking-info').style.display = 'none';
     document.getElementById('ticket-info').style.display = 'block';

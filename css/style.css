@@ -121,9 +121,6 @@ nav ul li a:hover, a.active{
 .ticket-information thead{
     background-color: rgb(173, 67, 48);
 }
-.ticket-information tr th{
-    /* color: white; */
-}
 .ticket-information table{
     width: 100%;
 }
@@ -133,6 +130,7 @@ nav ul li a:hover, a.active{
 table{
     max-width: 100%;
     background-color: transparent;
+    margin-bottom: 1rem;
 }
 .f-class{
     display: flex;
