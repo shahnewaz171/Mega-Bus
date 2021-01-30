@@ -42,14 +42,14 @@ function totalCalculate(){
     document.getElementById('total-ticket').innerText = totalTicket;
     
     //Total Class [First + Economy]
-    let firstClass = firstClassQuantityNumber;
+    let firstClassTicket = firstClassQuantityNumber;
     if(firstClassQuantityNumber > 0){
-        document.getElementById('first-class').innerText = "First " + firstClass; 
+        document.getElementById('first-class').innerText = "First " + firstClassTicket; 
     }
 
-    let economyClass = economyQuantityNumber;
+    let economyClassTicket = economyQuantityNumber;
     if(economyQuantityNumber > 0){
-        document.getElementById('economy-class').innerText = "Economy " + economyClass; 
+        document.getElementById('economy-class').innerText = "Economy " + economyClassTicket; 
     }
 }
 

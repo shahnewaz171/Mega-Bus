@@ -40,6 +40,7 @@
 
         <div id="booking-information" class="booking-form">
             <h3>Explore By Bus</h3>
+            <!-- Bus Location -->
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">From</label>
@@ -50,7 +51,8 @@
                     <input class="inp-style" type="text" name="" placeholder="Sherpur">
                 </div>
             </div>
-
+            <!--/. Bus Location -->
+            <!-- Date -->
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Journey</label>
@@ -61,17 +63,19 @@
                     <input class="inp-style" type="date" name="return">
                 </div>
             </div>
+            <!--/. Date -->
+            <!-- Ticket Quantity -->
             <div class="inputs">
                 <div class="input-group f-class">
-                <div>
-                    <label id="first-type" for="">First Class ($150)</label>
-                    <input id="firstClass-quantity" class="inp-style inp-width" type="number" name="first_class" value="0">
+                    <div>
+                        <label id="first-type" for="">First Class ($150)</label>
+                        <input id="firstClass-quantity" class="inp-style inp-width" type="number" name="first_class" value="0">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button id="firstClass-increase" onclick="handleTicketChange('firstClass', true)"><i class="fas fa-plus"></i></button>
+                        <button id="firstClass-decrease" onclick="handleTicketChange('firstClass', false)"><i class="fas fa-minus"></i></button>
+                    </div>
                 </div>
-                <div class="plus-minus-btn">
-                    <button id="firstClass-increase" onclick="handleTicketChange('firstClass', true)"><i class="fas fa-plus"></i></button>
-                    <button id="firstClass-decrease" onclick="handleTicketChange('firstClass', false)"><i class="fas fa-minus"></i></button>
-                </div>
-            </div>
                 <div class="input-group f-class">
                     <div>
                         <label for="">Economy ($100)</label>
@@ -82,8 +86,10 @@
                         <button onclick="handleTicketChange('economy', false)"><i class="fas fa-minus"></i></button>
                     </div>
                 </div>
-
             </div>
+            <!--/. Ticket Quantity -->
+
+            <!-- Total Fare -->
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
@@ -98,6 +104,7 @@
                     </div>
                 </div>
             </div>
+            <!--/. Total Fare -->
             <button  onclick="submitInformation()" id="book-btn" class="btn-style">Book Now</button>
         </div>
         <!--/. Booking Section-->
@@ -132,9 +139,12 @@
         <!--/. Ticket Information -->
     </main>
 
+    <!-- Footer Section -->
     <footer class="mt-5">
         <p><small>This website made by &copy Muhammad Shahnewaz, all right reserved.</small></p>
     </footer>
+     <!--/. Footer Section -->
+
 
     <!-- JS -->
     <script src="js/main.js"></script>
