@@ -118,7 +118,8 @@ nav ul li a:hover, a.active{
 }
 .ticket-information h3{
     margin: 10px 0px;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    font-size: 25px;
 }
 .ticket-information table{
     border-collapse: collapse;
