@@ -13,6 +13,7 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="css/all.min.css">
     <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,12 +21,29 @@
     <!--Header and Menu Section-->
     <header class="container">
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo" class="logo">
+            </a>
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#" class="active"><i class="fas fa-bus"></i> Bus</a></li>
+                <li><a href="#booking-information" class="active"><i class="fas fa-bus"></i> Bus</a></li>
                 <li><a href="#">Sign Up</a></li>
             </ul>
+            <!-- Small Device NavBar -->
+            <div class="mobile-menu">
+                <span style="color:#fff" onclick="openNav()">&#9776;</span>
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void()" onclick="closeNav()" class="closeBtn">&times;</a>
+                    <div class="overlay-content">
+                        <a onclick="closeNav()" href="#">Home</a>
+                        <a onclick="closeNav()" href="#">Contact</a>
+                        <a onclick="closeNav()" href="#booking-information">Bus</a>
+                        <a onclick="closeNav()" href="#">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            <!--/. Small Device NavBar -->
         </nav>
     </header>
     <!--/. Header and Menu Section-->
@@ -58,7 +76,7 @@
                     <label" for="">Journey</label>
                     <input class="inp-style" type="date" name="departure">
                 </div>
-                <div class="input-group">
+                <div class="input-group return-date">
                     <label for="">Return</label>
                     <input class="inp-style" type="date" name="return">
                 </div>
