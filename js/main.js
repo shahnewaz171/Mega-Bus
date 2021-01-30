@@ -18,8 +18,8 @@ function handleTicketChange(ticket, isIncrease){
 
 //The total amount has been calculated
 function totalCalculate(){
-    let firstClassQuantityNumber = getQuantityValue('firstClass');
-    let economyQuantityNumber = getQuantityValue('economy');
+    const firstClassQuantityNumber = getQuantityValue('firstClass');
+    const economyQuantityNumber = getQuantityValue('economy');
 
     //Sub-total Price
     const subTotalPrice = firstClassQuantityNumber * 150 + economyQuantityNumber * 100;
