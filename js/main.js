@@ -18,8 +18,8 @@ function handleTicketChange(ticket, isIncrease){
 
 //The total amount has been calculated
 function totalCalculate(){
-    const firstClassQuantityNumber = getQuantityValue('firstClass');
-    const economyQuantityNumber = getQuantityValue('economy');
+    let firstClassQuantityNumber = getQuantityValue('firstClass');
+    let economyQuantityNumber = getQuantityValue('economy');
 
     //Sub-total Price
     const subTotalPrice = firstClassQuantityNumber * 150 + economyQuantityNumber * 100;
@@ -40,17 +40,6 @@ function totalCalculate(){
     //Total Ticket
     const totalTicket = firstClassQuantityNumber + economyQuantityNumber;
     document.getElementById('total-ticket').innerText = totalTicket;
-    
-    //Total Class [First + Economy]
-    let firstClassTicket = firstClassQuantityNumber;
-    if(firstClassQuantityNumber > 0){
-        document.getElementById('first-class').innerText = "First " + firstClassTicket; 
-    }
-
-    let economyClassTicket = economyQuantityNumber;
-    if(economyQuantityNumber > 0){
-        document.getElementById('economy-class').innerText = "Economy " + economyClassTicket; 
-    }
 }
 
 function getQuantityValue(ticket){

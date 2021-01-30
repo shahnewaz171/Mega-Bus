@@ -246,13 +246,6 @@ table tr td{
     display: flex;
     justify-content: space-between;
 }
-
-.border-bottom{
-    border-bottom: none;
-}
-.border-top{
-    border-top: none;
-}
 footer{
     margin-top: 3rem;
     text-align: center;
